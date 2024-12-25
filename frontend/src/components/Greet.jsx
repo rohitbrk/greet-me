@@ -19,7 +19,6 @@ const Greet = () => {
   };
   return (
     <div>
-      Hey
       <form onSubmit={handleSubmit}>
         <input
           type="text"
