@@ -15,6 +15,7 @@ const Greet = () => {
     });
     const data = await res.json();
     setResponse(data.msg);
+    setName("");
   };
   return (
     <div>

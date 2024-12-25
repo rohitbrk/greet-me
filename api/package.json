@@ -1,6 +1,9 @@
 {
   "scripts": {
-    "dev": "node index.js"
+    "dev": "node index.js",
+    "start": "node index.js",
+    "build": "cd ../frontend && npm run build",
+    "prod": "npm run build && npm run start"
   },
   "dependencies": {
     "cors": "^2.8.5",
