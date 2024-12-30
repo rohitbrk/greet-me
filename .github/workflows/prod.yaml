@@ -19,7 +19,7 @@ jobs:
           node-version: 20
 
       - name: install packages and create build
-        run: cd ./frontend && npm ci && npm run build
+        run: cd ./api/frontend && npm ci && npm run build
 
       - name: deploy to production
         uses: johnbeynon/render-deploy-action@v0.0.8

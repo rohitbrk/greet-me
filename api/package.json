@@ -2,7 +2,6 @@
   "scripts": {
     "dev": "node index.js",
     "start": "node index.js",
-    "build": "cd ../frontend && npm i && npm run build",
     "prod": "npm run start"
   },
   "dependencies": {
