@@ -5,6 +5,7 @@ function App() {
   return (
     <>
       <div>
+        <h1>Hurray Live !</h1>
         <Greet />
       </div>
     </>

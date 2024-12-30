@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 // Serve static files from the "public" directory
-app.use(express.static("./frontend/dist"));
+app.use(express.static("../frontend/dist"));
 
 // Handle POST requests to "/greet"
 app.post("/api/greet", (req, res) => {
