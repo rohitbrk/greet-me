@@ -19,10 +19,10 @@ jobs:
           node-version: 20
 
       - name: clean workspace
-        run: rm -rf ./frontend/dist
+        run: rm -rf frontend/dist
 
       - name: install packages and create build
-        run: cd ./frontend && npm ci && npm run build
+        run: cd frontend && npm ci && npm run build
 
       - name: deploy to production
         uses: johnbeynon/render-deploy-action@v0.0.8
