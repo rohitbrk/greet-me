@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <div>
-        <h1>Hurray Live !</h1>
+        <h1>Hurray Live 2</h1>
         <Greet />
       </div>
     </>
