@@ -18,9 +18,6 @@ jobs:
         with:
           node-version: 20
 
-      - name: clean workspace
-        run: rm -rf frontend/dist
-
       - name: install packages and create build
         run: cd frontend && npm ci && npm run build
 

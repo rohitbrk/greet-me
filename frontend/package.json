@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "clean": "rm -rf dist",
-    "build": "npm run clean && vite build --force",
+    "build": "vite build --force",
     "lint": "eslint .",
     "preview": "vite preview"
   },
