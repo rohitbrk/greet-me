@@ -6,10 +6,12 @@ on:
       - main
 
 jobs:
-  build:
+  deploy:
+    name: deploy2
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
+      - name: checkout code
         uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
@@ -19,12 +21,6 @@ jobs:
       - name: install packages and create build
         run: cd ./frontend && npm ci && npm run build
 
-  deploy:
-    name: deploy2
-    needs: [build]
-    runs-on: ubuntu-latest
-
-    steps:
       - name: deploy to production
         uses: johnbeynon/render-deploy-action@v0.0.8
         with:
