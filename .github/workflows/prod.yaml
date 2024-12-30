@@ -20,7 +20,7 @@ jobs:
         run: cd ./frontend && npm ci && npm run build
 
   deploy:
-    name: deploy
+    name: deploy2
     needs: [build]
     runs-on: ubuntu-latest
 
