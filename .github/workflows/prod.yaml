@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    name: deploy2
+    name: deploy3
     runs-on: ubuntu-latest
 
     steps:
