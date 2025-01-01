@@ -18,6 +18,9 @@ jobs:
         with:
           node-version: 20
 
+      - name: install packages at server
+        run: cd api && npm ci
+
       - name: install packages and create build
         run: cd frontend && npm ci && npm run build
 
