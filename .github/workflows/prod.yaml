@@ -28,13 +28,8 @@ jobs:
         env:
           RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
         run: |
-          curl --request POST \
-              --url https://api.render.com/v1/services/srv-ctm4s8i3esus739n77dg/deploys \
-              --header 'accept: application/json' \
-              --header 'Authorization: Bearer $RENDER_API_KEY' \
-              --header 'content-type: application/json' \
-              --data '
-          {
-            "clearCache": "clear",
-          }
-          '
+          curl -X POST \
+          -H "Authorization: Bearer $RENDER_API_KEY" \
+          -H "Content-Type: application/json" \
+          -d '{"serviceId": "srv-ctm4s8i3esus739n77dg"}' \
+          https://api.render.com/v1/services/srv-ctm4s8i3esus739n77dg/deploys
