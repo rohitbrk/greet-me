@@ -31,6 +31,7 @@ jobs:
           curl --request POST \
               --url https://api.render.com/v1/services/srv-ctm4s8i3esus739n77dg/deploys \
               --header 'accept: application/json' \
+              --header 'Authorization: Bearer $RENDER_API_KEY' \
               --header 'content-type: application/json' \
               --data '
           {
