@@ -56,9 +56,7 @@ jobs:
 
       - name: Move files to correct location
         run: |
-          mkdir -p ./api/public
-          mv buildfiles/* ./api/public/ || echo "❌ No files to move"
-          rm -r buildfiles || echo "❌ Cleanup failed"
+          mv . ./api/public/ || echo "❌ No files to move"
 
       - name: Deploy to production
         env:
