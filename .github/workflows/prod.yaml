@@ -28,8 +28,8 @@ jobs:
           cd frontend
           npm run build
 
-      - name: Debug Check if dist exists before upload
-        run: ls -R ./frontend/dist || echo "No build files found"
+      - name: Debug: Check if dist exists before upload
+        run: ls -R ./frontend/dist || echo "❌ No build files found"
 
       - name: Upload artifact to enable deployment
         uses: actions/upload-artifact@v4
@@ -43,21 +43,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: List available artifacts before download
-        run: ls -R /home/runner/work || echo "No artifacts found"
+      - name: Debug: List available artifacts before download
+        run: ls -R /home/runner/work || echo "❌ No artifacts found"
 
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
           name: buildfiles
 
-      - name: Debug List files after download
-        run: ls -R buildfiles || echo "Artifact not found"
+      - name: Debug: List files after download
+        run: ls -R . || echo "❌ Artifact not found"
 
       - name: Move files to correct location
         run: |
-          mv buildfiles/* ./api/public/
-          rm -r buildfiles
+          mkdir -p ./api/public
+          mv buildfiles/* ./api/public/ || echo "❌ No files to move"
+          rm -r buildfiles || echo "❌ Cleanup failed"
 
       - name: Deploy to production
         env:
