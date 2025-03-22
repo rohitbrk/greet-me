@@ -29,7 +29,11 @@ jobs:
           npm run build
 
       - name: Debug Check if dist exists before upload
-        run: ls -R ./frontend/dist || echo "❌ No build files found"
+        run: 
+        run: |
+          ls -R .
+          ls -R ./frontend/dist || echo "❌ No build files found"
+        
 
       - name: Upload artifact to enable deployment
         uses: actions/upload-artifact@v4
