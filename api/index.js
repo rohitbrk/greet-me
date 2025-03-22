@@ -17,7 +17,7 @@ app.get("*", (_, res) => {
 
 // Handle POST requests to "/greet"
 app.post("/api/greet", (req, res) => {
-  res.status(200).json({ msg: `hey ${req.body.name}` });
+  res.status(200).json({ msg: `hey, ${req.body.name}` });
 });
 
 // Start the server
