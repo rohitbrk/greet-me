@@ -55,11 +55,6 @@ jobs:
       - name: Debug List files after download
         run: ls -R . || echo "❌ Artifact not found"
 
-      - name: Move files to correct location
-        run: |
-          ls -R .
-          mv * ./api/public/ || echo "❌ No files to move"
-
       - name: Deploy to production
         env:
           RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
