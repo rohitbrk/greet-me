@@ -57,7 +57,6 @@ jobs:
 
       - name: Move files to correct location
         run: |
-          cd ..
           ls -R .
           mv * ./api/public/ || echo "❌ No files to move"
 
