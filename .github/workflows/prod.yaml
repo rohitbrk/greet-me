@@ -31,7 +31,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: poduction file
-          path: ./api/public
+          path: ./frontend/dist
   deploy:
     needs: build
     name: deploy
