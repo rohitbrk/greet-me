@@ -49,11 +49,6 @@ jobs:
           name: buildfiles
           path: ./api/public
 
-      - name: Move files to correct location
-        run: |
-          mv ./api/public/buildfiles/* ./api/public/
-          rm -r ./api/public/buildfiles
-
       - name: deploy to production
         env:
           RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
