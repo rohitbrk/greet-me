@@ -30,14 +30,13 @@ jobs:
 
       - name: Debug Check if dist exists before upload
         run: |
-          ls -R .
           ls -R ./frontend/dist || echo "❌ No build files found"
 
       - name: Upload artifact to enable deployment
         uses: actions/upload-artifact@v4
         with:
           name: buildfiles
-          path: ./frontend/dist
+          path: ./
 
   deploy:
     needs: build
