@@ -56,7 +56,7 @@ jobs:
 
       - name: Move files to correct location
         run: |
-          mv . ./api/public/ || echo "❌ No files to move"
+          mv ./buildfiles ./api/public/ || echo "❌ No files to move"
 
       - name: Deploy to production
         env:
