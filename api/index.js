@@ -1,8 +1,8 @@
-const express = require("express");
+import express from "express";
+import cors from "cors";
+import path from "path";
 const app = express();
 const port = 3001;
-const cors = require("cors");
-const path = require("path");
 
 app.use(cors());
 
