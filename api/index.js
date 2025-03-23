@@ -9,10 +9,10 @@ app.use(cors());
 // Middleware to parse JSON request bodies
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname, "../frontend/dist")));
+app.use(express.static(path.join(__dirname, "public/dist")));
 
 app.get("*", (_, res) => {
-  res.sendFile(path.resolve(__dirname, "../frontend/dist/index.html"));
+  res.sendFile(path.resolve(__dirname, "public/index.html"));
 });
 
 // Handle POST requests to "/greet"
