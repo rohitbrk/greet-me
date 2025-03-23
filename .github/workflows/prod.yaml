@@ -57,6 +57,7 @@ jobs:
         run: |
           ls -R . || echo "❌ Artifact not found"
           rm -rf ./frontend/node_modules
+          mkdir ./api/public
           mv ./frontend/dist/* ./api/public/
 
       - name: Deploy to production
