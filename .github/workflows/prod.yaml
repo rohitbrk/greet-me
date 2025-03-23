@@ -54,7 +54,9 @@ jobs:
           name: buildfiles
 
       - name: Debug List files after download
-        run: ls -R . || echo "❌ Artifact not found"
+        run: |
+          ls -R . || echo "❌ Artifact not found"
+          rm -rf ./frontend/node_modules
 
       - name: Deploy to production
         env:
